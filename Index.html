@@ -1,116 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VehicleVibe</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
     <header>
-      <nav>
-        <div class="logo">
-          <a href="#">VehicleVibe</a>
-        </div>
+        <nav>
+                <div class="logo">
+                    <a href="#">VehicleVibe</a>
+                </div>
+               
+                <ul class="navLink" id="navLink">
+                    <li><a href="#home" class="gg">Home</a></li>
+                    <li><a href="#contact" class="gg">Contact</a></li>
+                    <li><a href="#aboutus" class="gg">About us</a></li>
+                    <li><a href="#Book">Book</a></li>
+                    <li class="btns">
+                        <button class="btn">Login</button>
+                    </li>
+                    <li class="btns">
+                        <button class="btn">Signup</button>
+                    </li>
+                </ul>
+                <div class="menu" id="menuBtn">
+                    <i class="ri-menu-line" onclick="toggleMenu()"></i>
+                </div>
 
-        <ul class="navLink" id="navLink">
-          <li><a href="#home" class="gg" onclick="">Home</a></li>
-          <li><a href="#contact" class="gg">Contact</a></li>
-          <li><a href="#main_back" class="gg">About us</a></li>
-          <li><a href="#Book">Book</a></li>
-          <li class="btns">
-            <button class="btn">Login</button>
-          </li>
-          <li class="btns">
-            <button class="btn">Signup</button>
-          </li>
-        </ul>
-        <div class="menu" id="menuBtn">
-          <i class="ri-menu-line" onclick="toggleMenu()"></i>
-        </div>
-      </nav>
-      <div id="bg">
-        <img src="carr (1).png" alt="car" />
-      </div>
+        </nav>
+          
     </header>
-    <main>
-      <div id="main_back">
-        <div id="head">
-          <p>Explore nepal with us</p>
-        </div>
-        <div class="txt">
-          <p>
-            Quality <br />
-            We take pride in offering a diverse fleet of well-maintained
-            vehicles, ensuring you have a range of options to suit your needs.
-            Your comfort is our priority, with premium designed for convenience
-            and ease
-          </p>
-        </div>
-        <div class="txt">
-          <p>
-            Reliability <br>
-            Reliability is at the heart of our service. We offer
-            24/7 vehicle availability to meet your schedule, backed by modern
-            technology that enhances both your experience and safety.
-          </p>
-        </div>
-      </div>
-      <div id="photos">
-        <div class="samples">
-          <div class="sample-item">
-            <img src="car2.jpeg" alt="car" class="images">
-            <p>Hyundai Sonata</p>
-          </div>
-          <div class="sample-item">
-            <img src="car3.jpg" alt="car" class="images">
-            <p>Hyundai Sonata</p>
-          </div>
-          <div class="sample-item">
-            <img src="car5.jpg" alt="car" class="images">
-            <p>Hyundai Sonata</p>
-          </div>
-          <div class="sample-item">
-            <img src="car6.jpg" alt="car" class="images">
-            <p>Hyundai Sonata</p>
-          </div>
-          <div class="sample-item">
-            <img src="carr (1).png" alt="car" class="images">
-            <p>Hyundai Sonata</p>
-          </div>
-          <div class="sample-item">
-            <img src="car2.jpeg" alt="car" class="images">
-            <p>Hyundai Sonata</p>
-          </div>
-
-        </div>
-      </div>
-    </main>
-    <script
-      src="https://kit.fontawesome.com/f8e1a90484.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/f8e1a90484.js" crossorigin="anonymous"></script>
     <script>
-      let menuList = document.getElementById("navLink");
-      menuList.style.maxHeight = "0px";
+        let menuList = document.getElementById("navLink");
+        menuList.style.maxHeight="0px";
 
-      function toggleMenu() {
-        if (menuList.style.maxHeight == "0px") {
-          menuList.style.maxHeight = "300px";
-        } else {
-          menuList.style.maxHeight = "0px";
+        function toggleMenu(){
+            if(menuList.style.maxHeight=="0px"){
+                menuList.style.maxHeight="300px";
+            }
+            else{
+                menuList.style.maxHeight="0px";
+            }
         }
-      }
     </script>
-  </body>
+      <!-- Main Booking Section -->
+      <section class="booking-section">
+        <div class="background-image"></div>
+        <div class="booking-content">
+            <h1>Find your drive</h1>
+            <p>Explore Nepal's largest car-sharing marketplace</p>
+            <button class="book-now-btn" onclick="openBookingForm()">Book Now</button>
+        </div>
+
+        <!-- Initial Booking Form -->
+        <div class="initial-form">
+            <form>
+                <input type="text" placeholder="PickUp Location">
+                <input type="text" placeholder="Return Location">
+                <input type="date" placeholder="Pick up Date">
+                <input type="date" placeholder="Return Date">
+                <button type="button" onclick="openBookingForm()">Book Now</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Modal Booking Form -->
+    <div class="modal" id="bookingModal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeBookingForm()">&times;</span>
+            <h2>Car Booking Form</h2>
+            <form>
+                <input type="text" placeholder="Pick Up Point">
+                <input type="text" placeholder="Destination Point">
+                <input type="date" placeholder="Start Date">
+                <input type="date" placeholder="End Date">
+                <input type="time" placeholder="Pick Up Time">
+                <input type="time" placeholder="Drop Time">
+                <select>
+                    <option value="SUV">SUV (5 Seater)</option>
+                    <option value="Sedan">Sedan (4 Seater)</option>
+                    <option value="Truck">Truck</option>
+                    <!-- Add more options as needed -->
+                </select>
+                <button type="submit">Book Now</button>
+            </form>
+        </div>
+    </div>
+
+
+<section class="header-section">
+    <h1>Explore Nepal <br> With Us.</h1>
+</section>
+
+<section class="info-section">
+    <div class="info-box">
+        <h2>Quality</h2>
+        <p>We take pride in offering a diverse fleet of well-maintained vehicles, ensuring you have a range of options to suit your needs. Your comfort is our priority, with premium designed for convenience and ease.</p>
+    </div>
+    <div class="info-box">
+        <h2>Reliability</h2>
+        <p>Reliability is at the heart of our service. We offer 24/7 vehicle availability to meet your schedule, backed by modern technology that enhances both your experience and safety.</p>
+    </div>
+</section>
+
+<section class="car-section">
+    <div class="car-grid">
+        <div class="car-box">
+            <img src="hyundai.jpg" alt="Hyundai Sonata">
+            <p>Hyundai Sonata</p>
+        </div>
+        <div class="car-box">
+            <img src="jeep.jpg" alt="Jeep Wrangler">
+            <p>Jeep Wrangler</p>
+        </div>
+        <div class="car-box">
+            <img src="bmw.jpg" alt="BMW">
+            <p>BMW</p>
+        </div>
+        <div class="car-box">
+            <img src="tesla.jpg" alt="Tesla">
+            <p>Tesla</p>
+        </div>
+        <div class="car-box">
+            <img src="kia.jpg" alt="KIA Seltos">
+            <p>KIA Seltos</p>
+        </div>
+        <div class="car-box">
+            <img src="audi.jpg" alt="Audi">
+            <p>Audi</p>
+        </div>
+    </div>
+</section>
+
+<section class="why-section">
+    <div class="content">
+        <h2>Why Vehicle Vibe Nepal?</h2>
+        <div class="features">
+            <ul>
+              <li>Easy and quick online booking</li>
+              <li>Privacy & Freedom</li>
+            </ul>
+            <ul>
+              <li>All-Nepal Permits</li>
+              <li>Unlimited Kilometers</li>
+              
+              <li>Driver Facility</li>
+            </ul>
+            <ul>
+                <li>Clean & Well-Maintained Fleet</li>
+                <li>Limited Liability</li>
+            </ul>
+            
+          </div>
+          <p>
+            Our services are affordable, convenient, and safe. You can rent a car from Self Drive Nepal at any time convenient to you, and it'll be delivered to your doorstep. In addition to offering an hourly rate or daily rate according to the package you select, Self Drive Nepal offers flexible car rental services. Using our Smart App or website, you can rent a car monthly, get unlimited kilometers, or even purchase a package for your trip. Our fleet of cars is insured, so while you're cruising down open roads, you'll be safe and sound.
+          </p>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-container">
+      <!-- About Section -->
+      <div class="footer-about">
+        <img src="logo.webp" alt="Self Drive Logo" class="footer-logo">
+        <h3>About who we are?</h3>
+        <p>We are Nepal’s largest self drive vehicle rental company. With just a touch, book your next drive for all over Nepal.</p>
+      </div>
+
+      <!-- Links Section -->
+      <div class="footer-links">
+        <h3>Explore Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <!-- Contact Section -->
+      <div class="footer-contact">
+        <h3>Office Location</h3>
+        <p><i class="fas fa-map-marker-alt"></i> Naxal, Kathmandu - Nepal</p>
+        <p><i class="fas fa-phone-alt"></i> Customer support: 01-59875478 / 9801078924</p>
+        <p><i class="fas fa-envelope"></i> info@vehiclevibe.com</p>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+      <p>Copyright © 2024 - VehicleVibe | All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  
+</body>
 </html>
