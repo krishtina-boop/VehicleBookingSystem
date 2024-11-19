@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body{
+    
+    scroll-behavior: smooth;
+}
+header{
+    /* background-image: url('carr\ \(1\).png');
+    background-position: center; */
+    min-height: 80vh;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    padding-bottom: 0;
+    /* background-size: cover;
+    background-repeat: no-repeat;
+    position: relative; */
+}
+
+nav{
+    background-color: #DDDDDD;
+    display: flex;
+    align-items: center;
+    padding: 10px 3px;
+    justify-content: space-between;
+    position: relative;
+    height: 50px;
+
+}
+/* #bg{
+    border: 2px solid blue;
+  
+    background-image: url('carr\ \(1\).png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: 80vh;
+    
+    width: 100%;
+} */
+#bg {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#bg img {
+    width: 100%;
+    max-width: 1500px;
+    height: 60vh;
+    object-fit: cover;
+}
+button {
+    background: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+.btn{
+    padding: 5px;
+    /* margin: 2px; */
+    background-color: #4A4A4A;
+    font-size: 10px;
+    border: #4A4A4A;
+    border-radius: 5px;
+    color: white;
+    box-shadow: 1px 1px 5px black;
+    width: 55px;
+   
+}
+.logo{
+    padding: 10px;
+}
+.logo a{
+    font-size: 1rem;
+    color: black;
+    font-weight: 300;
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+nav ul{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+body{
+    font-family: "Poppins", system-ui;
+
+}
+nav ul li a{
+    color: black;
+    text-decoration: none;
+    padding-right: 10px;
+}
+.gg{
+    
+    border-right: 1px solid black;
+}
+.menu{
+    display: none;
+}
+.menu i{
+    color: black;
+    font-size: 30px;
+    font-weight: 300;
+    
+}
+/* header{
+    border: 2px solid red;
+} */
+#main_back{
+    background-color: #555252;
+    position: absolute;
+    top: 68%; /* Position directly below header */
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    z-index: 1; 
+    display: flex;
+    justify-content: space-around;
+}
+#main_back #head {
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid white; */
+    height: 30vh;
+
+    
+}
+.txt{
+    display: flex;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid white; */
+    height: 30vh; /* Default height */
+    width: 25%; /* Default width for large screens */
+    padding: 1rem; /* Padding for inner spacing */
+    box-sizing: border-box;
+}
+.txt p {
+    font-size: 1rem;
+    color: white;
+}
+#photos{
+    padding: 2rem;
+    background-color: #555252;
+}
+.samples {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Default 3 columns */
+    gap: 1rem; /* Space between items */
+}
+.sample-item {
+    text-align: center;
+    /* background-color: #fff;
+    border-radius: 8px; */
+    padding: 1rem;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); Optional: shadow for each item */
+}
+.images {
+    width: 100%; /* Make image responsive */
+    height: auto;
+    border-radius: 8px;
+}
+@media (max-width: 1024px) {
+    .txt {
+        width: 40%; /* Slightly increase width for smaller screens */
+        height: 25vh; /* Adjust height */
+    }
+    .samples {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+    }
+}
+@media (max-width:768px){
+    nav ul{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+        background-color: #DDDDDD;
+        gap: 0;
+        overflow: hidden;
+        font-size: 1rem;
+    }
+    nav ul li{
+        padding: 10px;
+    }
+    .menu{
+        display: block;
+       
+    }
+    #navList{
+        transition: all 0.5s;
+    }
+    .gg{
+    
+        border-right: none;
+    }
+    header{
+        background-size: contain;
+        height: 50vh;
+    }
+    .txt {
+        width: 50%; /* Increase width for smaller screens */
+        height: 25vh; /* Adjust height as needed */
+        padding: 0.5rem;
+    }
+    .samples {
+        grid-template-columns: 1fr; /* 1 column for mobile */
+    }
+  
+}
+@media (max-width: 480px) {
+    .txt {
+        width: 100%; /* Full width for mobile screens */
+        height: auto; /* Automatic height adjustment */
+        flex-direction: column; /* Stack items vertically */
+        padding: 1rem;
+    }
+    .sample-item p {
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+    }
+}
+

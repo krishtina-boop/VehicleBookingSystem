@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VehicleVibe</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="#">VehicleVibe</a>
+        </div>
+
+        <ul class="navLink" id="navLink">
+          <li><a href="#home" class="gg" onclick="">Home</a></li>
+          <li><a href="#contact" class="gg">Contact</a></li>
+          <li><a href="#main_back" class="gg">About us</a></li>
+          <li><a href="#Book">Book</a></li>
+          <li class="btns">
+            <button class="btn">Login</button>
+          </li>
+          <li class="btns">
+            <button class="btn">Signup</button>
+          </li>
+        </ul>
+        <div class="menu" id="menuBtn">
+          <i class="ri-menu-line" onclick="toggleMenu()"></i>
+        </div>
+      </nav>
+      <div id="bg">
+        <img src="carr (1).png" alt="car" />
+      </div>
+    </header>
+    <main>
+      <div id="main_back">
+        <div id="head">
+          <p>Explore nepal with us</p>
+        </div>
+        <div class="txt">
+          <p>
+            Quality <br />
+            We take pride in offering a diverse fleet of well-maintained
+            vehicles, ensuring you have a range of options to suit your needs.
+            Your comfort is our priority, with premium designed for convenience
+            and ease
+          </p>
+        </div>
+        <div class="txt">
+          <p>
+            Reliability <br>
+            Reliability is at the heart of our service. We offer
+            24/7 vehicle availability to meet your schedule, backed by modern
+            technology that enhances both your experience and safety.
+          </p>
+        </div>
+      </div>
+      <div id="photos">
+        <div class="samples">
+          <div class="sample-item">
+            <img src="car2.jpeg" alt="car" class="images">
+            <p>Hyundai Sonata</p>
+          </div>
+          <div class="sample-item">
+            <img src="car3.jpg" alt="car" class="images">
+            <p>Hyundai Sonata</p>
+          </div>
+          <div class="sample-item">
+            <img src="car5.jpg" alt="car" class="images">
+            <p>Hyundai Sonata</p>
+          </div>
+          <div class="sample-item">
+            <img src="car6.jpg" alt="car" class="images">
+            <p>Hyundai Sonata</p>
+          </div>
+          <div class="sample-item">
+            <img src="carr (1).png" alt="car" class="images">
+            <p>Hyundai Sonata</p>
+          </div>
+          <div class="sample-item">
+            <img src="car2.jpeg" alt="car" class="images">
+            <p>Hyundai Sonata</p>
+          </div>
+
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://kit.fontawesome.com/f8e1a90484.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      let menuList = document.getElementById("navLink");
+      menuList.style.maxHeight = "0px";
+
+      function toggleMenu() {
+        if (menuList.style.maxHeight == "0px") {
+          menuList.style.maxHeight = "300px";
+        } else {
+          menuList.style.maxHeight = "0px";
+        }
+      }
+    </script>
+  </body>
+</html>
